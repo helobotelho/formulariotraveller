@@ -1,116 +1,139 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Licorice&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/** Fundo do layout  **/
 html {
-    font-family: 'Lato', sans-serif;
-    background-color: #eef7f2;
+    background-image: url(./images/background.png);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/** Container principal de vidro  **/
 .container {
-    width: 90%;
+    width: 800px;
     height: auto;
-    margin: 10px auto;
-    padding: 10px;
-    border: 1px solid #999;
+    margin: 60px auto;
+    padding: 35px;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    backdrop-filter: blur(10px) saturate(165%);
+    -webkit-backdrop-filter: blur(10px) saturate(165%);
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
+/** Fonte do título "Projeto Traveller" **/
 h2 {
-    margin: 10px 10px 0;
-    color: #ffff;
     font-family:'Alegreya Sans SC', sans-serif;
-    font-weight: 900;
-    font-size:45px;
+    font-size:46px;
+    color: rgb(88, 88, 88);
+    margin: 20px;
     text-align: center;
-    border-radius: 0px;
-    background-color: #72b394;
-    width: 100%;
-    margin-right: auto;
-    margin-left:auto;
 }
 
+/** Fonte dos subtítulos "Localização, contato" **/
 h3 {
-    margin: 10px 10px 0;
-    color: #226042;
     font-family:'Alegreya Sans SC', sans-serif;
-    font-weight: 900;
-    font-size:30px;
+    font-size:25px;
+    color: #226042;
+    margin: 12px 12px;
 }
 
-p {
-    margin-bottom: 10px;
-}
-
+/** Espaços entre os subtítulos **/
 hr {
-    margin: 20px 10px;
+    margin: 20px; 
 }
 
+/** Conteúdo da caixa principal branca onde vai ficar os campos dos formulários **/
 .campos {
-    color: #333;
-    margin: 5px auto;
     font-family: 'Lora', sans-serif;
+    font-size: 15px;
     padding: 10px;
-    font-size: 20px;
-    border: 0;
     display: flex;
     flex-direction: column;
 }
 
+/** Personalização das colunas e distâncias do formulário **/
 .campos, label {
-    margin: 5px 0;
+    margin: 8px 0;
     font-weight: 900;
-    color: #666;
+    color: rgb(86, 86, 86);
 }
 
+/** Personalização das caixas do formulário **/
 input, textarea {
-    width: 100%;
-    height: 50px;
-    padding-left: 10px;
+    width: 98%;
+    height: 40px;
+    padding-left: 12px;
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
+    border: 1px #fff;
+    border-radius: 5px;
 }
 
+/** Espaço entre as caixas dos formulários e os subsubtitulos **/
 .em__linha {
-    margin-bottom: 5px;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5px;
+    display: flex;
 }
 
+/** Tamanho das larguras das caixas do formulário **/
 .em__linha label, .em__linha input {
     width: 30%;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
+/** Caixa de texto do final **/
 textarea {
-    height: 150px;
+    width: 97%;
+    height: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 12px;
     resize: none;
     outline: none;
-    border: 1px solid #666;
-    padding: 10px;
 }
 
-.botoes {
-    padding: 10px;
+/** Checklist final da página **/
+#checklist {
     display: flex;
-    justify-content: flex-end;
+    margin-top: -50px;
 }
 
+.checkbox {
+    margin-left: 90px;
+    display: flex;
+}
+
+/** Localização do botão de salvar no final do formulário **/
+.botoes {
+    display: flex;
+    justify-content: end;
+    padding: 15px;
+}
+
+/** Personalização do botão no final do formulário de salvar **/
 .botoes input {
-    width: 260px;
-    height: 50px;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    border: 0;
+    width: 80px;
+    height: 40px;
+    font-family: 'Lora', sans-serif;
+    font-size: 16px;
     background-color: #226042;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    margin-top: 18px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 6px 0px 0px 0px #000, 0px 6px 0px 0px #446a33, -6px 0px 0px 0px #184e23, 0px 0px 0px 6px #DA635D, 5px 5px 12px 5px rgba(0,0,0,0); 
+    box-shadow: 6px 0px 0px 0px #000, 0px 6px 0px 0px #1c5335, -6px 0px 0px 0px #000, 0px 0px 0px 6px #578e64, 5px 5px 12px 5px rgba(0,0,0,0);}
+
+/** Gif do meio **/
+img {
+    width: 300px;
+    height: 270px;
+    margin-top: -160px;
+    margin-bottom: -80px;
 }

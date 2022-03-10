@@ -4,31 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testando conteúdos</title>
+    <title>Cadastro de Pontos Turísticos</title>
     <link rel="stylesheet" href="styless.css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png">
 </head>
 
 <body>
     <div class="container">
-        <h2>Projeto Traveller - Cadastro de Pontos Turísticos</h2>
+        <h2>Cadastro de Pontos Turísticos</h2>
         <form name="dados" id="dados" action="" method="post">
             <div class="campos"><label for="nome">Nome do ponto turístico:</label><input type="text" id="nome"
                     placeholder="ex: Cristo Redentor" autofocus required></div>
             <hr>
             <h3>Localização:</h3>
             <div class="campos">
-                <div class="em__linha"><label for="rua">Rua</label><label for="numero">Número</label><label
-                        for="bairro">Bairro</label></div>
-                <div class="em__linha"><input type="text" id="rua" required placeholder="ex: Av. Paulista"><input
-                        type="text" id="numero" required placeholder="ex: 1234"><input type="text" id="bairro" required
-                        placeholder="ex: Cerqueira Cesar"></div>
+                <div class="em__linha"><label for="rua">Rua</label><label
+                        for="bairro">Bairro</label><label for="numero">Número</label></div>
+                <div class="em__linha"><input type="text" id="rua" required placeholder="ex: Parque Nacional da Tijuca"><input type="text" id="bairro" required
+                        placeholder="ex: Alto da Boa Vista"><input
+                        type="text" id="numero" required placeholder="ex: 100"></div>
             </div>
             <div class="campos">
                 <div class="em__linha"><label for="cep">CEP</label><label for="cidade">Cidade</label><label
                         for="estados">Estado</label></div>
                 <div class="em__linha"><input type="text" id="cep" required placeholder="ex: 12345-678"><input
-                        type="text" id="numero" required placeholder="ex: São Paulo"><input list="uf" id="estados"
-                        class="lista" required placeholder="ex: Selecione o estado"><datalist id="uf">
+                        type="text" id="numero" required placeholder="ex: Rio de Janeiro"><input list="uf" id="estados"
+                        class="lista" required placeholder="ex: RJ"><datalist id="uf">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -47,7 +48,7 @@
                             <option value="PR">Paraná</option>
                             <option value="PE">Pernambuco</option>
                             <option value="PI">Piauí</option>
-                            <optionvalue="RJ">Rio de Janeiro</option>
+                            <option value="RJ">Rio de Janeiro</option>
                                 <option value="RN"> Grande do Norte</option>
                                 <option value="RS">Rio Grande do Sul</option>
                                 <option value="RO">Rondônia</option>
@@ -59,21 +60,7 @@
                                 <option value="EX">Estrangeiro</option>
                     </datalist></div>
             </div>
-            <hr>
-            <h3>Contato:</h3>
-            <div class="campos">
-                <div class="em__linha"><label for="telefone">Telefone</label><label
-                        for="email">Classificação</label><label for="data">Data do Cadastro</label></div>
-                <div class="em__linha"><input type="tel" id="telefone" required placeholder="ex: 00-1234-5678"><input
-                        list="classifica" id="classificacao" class="lista"
-                        requiredplaceholder="ex:  Selecione a classificação"><datalist id="classifica">
-                        <option value="1 estrela"></option>
-                        <option value="2 estrelas"></option>
-                        <option value="3 estrelas"></option>
-                        <option value="4 estrelas"></option>
-                        <option value="5 estrelas"></option>
-                    </datalist><input type="date" id="data" required></div>
-            </div>
+            
             <hr>
             <h3>Outras informações:</h3>
             <div class="campos">
@@ -83,27 +70,57 @@
                     <label for="dataCadastro">Site</label>
 </div>
 
-                <div class="em__linha"><input type="number" id="valor" required placeholder="ex: 200.00"><input
-                        type="email" id="email" required placeholder="ex: hotel@hotel.com"><input type="url" id="site"
-                        required placeholder="ex: www.hotel.com"></div>
+                <div class="em__linha">
+                    <input type="number" id="valor" required placeholder="ex: 50,00">
+                    <input
+                        type="email" id="email" required placeholder="ex: fulano@gmail.com">
+                        <input type="url" id="site"
+                        required placeholder="ex: www.santuariocristoredentor.com.br">
+                    
+            </div>
             </div>
 
             <div class="campos">
             <div class="em__linha">
                 <label for="textarea">História do local</label>
-                <label for="textarea">Restaurantes, lojas</label>
+                <label for="textarea">Comércio local</label>
                 <label for="textarea">Pontos de venda</label> </div>
 
-                <div class="em__linha"><input type="textarea" id="nome"
-                    placeholder="Como surgiu esse ponto turístico" autofocus required>
-                    <input type="textarea" id="nome" placeholder="Existem restaurantes, lojas, feiras, localizados próximo?" autofocus required>
-                    <input type="textarea" id="nome"
-                    placeholder="Blacktag, Shopping Beira Mar..." autofocus required>
+                <div class="em__linha">
+                    <input type="textarea" id="nome" placeholder="ex: no ano de 1800..." autofocus required>
+                    <input type="textarea" id="nome" placeholder="ex: Shopping Alto Mar, Feiras.." autofocus required>
+                    <input type="textarea" id="nome" placeholder="Blacktag, Shopping Beira Mar..." autofocus required>
                 </div></div>
 
-                        <div class="campos"><label for="informacoes">Mais informações</label><textarea name="" id="informações"
-                    placeholder="Informações adicionais"></textarea></div>
-            <div class="botoes"><input type="submit" value="Gravar ponto turístico"></div>
+
+                <hr>
+                <h3>Contato:</h3>
+                <div class="campos">
+                    <div class="em__linha">
+                    <label for="telefone">Telefone ou celular</label>
+                    <label for="data">Data</label></div>
+
+
+                    <div class="em__linha">
+                    <input type="tel" id="telefone" required placeholder="ex: (21)1234-5678">
+
+                    <img src="./images/aviao.gif" alt="This is an animated gif image, but it does not move"/>
+
+                    <input type="date" id="data" required>
+                </div>
+                </div>
+
+
+                        <div class="campos"><label for="informacoes">Observações</label><textarea name="" id="informações"
+                    placeholder="Informações extras"></textarea></div>
+
+                    <div class="campos">
+                        <input type= "checkbox" id= "checklist" name= "" value = "confirmo">
+                        <label for= "checklist"> Eu confirmo todos os itens aqui citados </label>
+                      </div>
+
+
+            <div class="botoes"><input type="submit" value="Salvar"></div>
         </form>
     </div>
 </body>
