@@ -5,24 +5,59 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Pontos Turísticos</title>
-    <link rel="stylesheet" href="styless.css">
-    <link rel="shortcut icon" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/favicon2.png">
 </head>
 
 <body>
+
+    <div class="header">
+        <div class="box_logo"> <img src="./images/guliver helo logo.png" width="30%" alt="Logo Gulliver Travel"
+                title="Gulliver Travel"></div>
+    </div>
+
+
     <div class="container">
-        <h2>Cadastro de Pontos Turísticos</h2>
+
+        <div class="box_subtitle">
+            <h2>CADASTRE AQUI PONTOS TURÍSTICOS</h2>
+        </div>
+        <div class="box_subtitle2">
+            <h4>Preencha o formulário abaixo para cadastrar um ponto turístico situado em qualquer país do mundo! Você
+                pode cadastrar a história do lugar e até uma rota turística.
+                <b>Ajude outros viajantes a descobrirem os seus futuros destinos! </b>
+            </h4>
+        </div>
+
+        <div class="image"><img src="./images/kit4.png" width="310" alt="Homem segurando mapa procurando seu destino"
+                title="À procura do seu destino"></div>
+
+
         <form name="dados" id="dados" action="" method="post">
             <div class="campos"><label for="nome">Nome do ponto turístico:</label><input type="text" id="nome"
                     placeholder="ex: Cristo Redentor" autofocus required></div>
-            <hr>
+
+            <div class="campos"><label for="informacoes">Descrição</label><textarea name="" id="informações"
+                    placeholder="Descreva sobre o ponto turístico"></textarea></div>
+
+            <div class="campos">
+                <h5>Selecione uma imagem</h5> <br>
+                <input type="file" v-model="field.value" @change="onFileChange">
+            </div>
+            <div class="campos">
+                <img :src="image" />
+            </div>
+
+            <div class="space"></div>
+
             <h3>Localização:</h3>
             <div class="campos">
-                <div class="em__linha"><label for="rua">Rua</label><label
-                        for="bairro">Bairro</label><label for="numero">Número</label></div>
-                <div class="em__linha"><input type="text" id="rua" required placeholder="ex: Parque Nacional da Tijuca"><input type="text" id="bairro" required
-                        placeholder="ex: Alto da Boa Vista"><input
-                        type="text" id="numero" required placeholder="ex: 100"></div>
+                <div class="em__linha"><label for="rua">Rua</label><label for="bairro">Bairro</label><label
+                        for="numero">Número</label></div>
+                <div class="em__linha"><input type="text" id="rua" required
+                        placeholder="ex: Parque Nacional da Tijuca"><input type="text" id="bairro" required
+                        placeholder="ex: Alto da Boa Vista"><input type="text" id="numero" required
+                        placeholder="ex: 100"></div>
             </div>
             <div class="campos">
                 <div class="em__linha"><label for="cep">CEP</label><label for="cidade">Cidade</label><label
@@ -49,79 +84,123 @@
                             <option value="PE">Pernambuco</option>
                             <option value="PI">Piauí</option>
                             <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN"> Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
-                                <option value="EX">Estrangeiro</option>
+                            <option value="RN"> Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                            <option value="EX">Estrangeiro</option>
                     </datalist></div>
             </div>
-            
-            <hr>
+
+            <br>
             <h3>Outras informações:</h3>
             <div class="campos">
                 <div class="em__linha">
                     <label for="tvalor">Valor do ingresso:</label>
-                    <label for="classificacao">E-mail</label>
+                    <label for="textarea">Pontos de venda</label>
                     <label for="dataCadastro">Site</label>
-</div>
+                </div>
 
                 <div class="em__linha">
                     <input type="number" id="valor" required placeholder="ex: 50,00">
-                    <input
-                        type="email" id="email" required placeholder="ex: fulano@gmail.com">
-                        <input type="url" id="site"
-                        required placeholder="ex: www.santuariocristoredentor.com.br">
-                    
-            </div>
+                    <input type="textarea" id="nome" placeholder="Blacktag, Shopping Beira Mar..." autofocus required>
+                    <input type="url" id="site" required placeholder="ex: www.santuariocristoredentor.com.br">
+
+                </div>
             </div>
 
             <div class="campos">
-            <div class="em__linha">
-                <label for="textarea">História do local</label>
-                <label for="textarea">Comércio local</label>
-                <label for="textarea">Pontos de venda</label> </div>
+                <div class="em__linha">
+                    <label for="textarea">
+                        <h5>História do local</h5>
+                    </label>
+                    <label for="textarea">
+                        <p>Comércio local</p>
+                    </label>
+                </div>
 
                 <div class="em__linha">
-                    <input type="textarea" id="nome" placeholder="ex: no ano de 1800..." autofocus required>
-                    <input type="textarea" id="nome" placeholder="ex: Shopping Alto Mar, Feiras.." autofocus required>
-                    <input type="textarea" id="nome" placeholder="Blacktag, Shopping Beira Mar..." autofocus required>
-                </div></div>
+                    <input type="textarea_box" id="name" placeholder="ex: no ano de 1800..." autofocus required>
+                    <input type="textarea_box" id="name" placeholder="ex: Shopping Alto Mar, Feiras.." autofocus
+                        required>
 
 
-                <hr>
-                <h3>Contato:</h3>
-                <div class="campos">
-                    <div class="em__linha">
+                </div>
+            </div>
+
+
+            <br>
+            <h3>Contato:</h3>
+            <div class="campos">
+                <div class="em__linha">
                     <label for="telefone">Telefone ou celular</label>
-                    <label for="data">Data</label></div>
+                    <label for="classificacao">E-mail</label>
+                    <label for="data">Data</label>
+                </div>
 
 
-                    <div class="em__linha">
+                <div class="em__linha">
                     <input type="tel" id="telefone" required placeholder="ex: (21)1234-5678">
 
-                    <img src="./images/aviao.gif" alt="This is an animated gif image, but it does not move"/>
+                    <input type="email" id="email" required placeholder="ex: fulano@gmail.com">
 
                     <input type="date" id="data" required>
                 </div>
-                </div>
+            </div>
+            <br>
+            <h3>Selecione se:</h3>
+
+            <input type="checkbox" id="checklist" name="" value="checked">
+            <label for="checklist">
+                <div class="verified">
+                    <h6>É permitido fumar</h6>
+            </label>
+    </div>
+
+    <input type="checkbox" id="checklist" name="" value="checked">
+    <label for="checkbox">
+        <div class="verified">
+            <h6>Há banheiros</h6>
+    </label>
+    </div>
+    <input type="checkbox" id="checklist" name="" value="checked">
+    <label for="checkbox">
+        <div class="verified">
+            <h6>Aberto aos feriados</h6>
+    </label>
+    </div>
+
+    <input type="checkbox" id="checklist" name="" value="checked">
+    <label for="checkbox">
+        <div class="verified">
+            <h6>Ar livre</h6>
+    </label>
+    </div>
+
+    <input type="checkbox" id="checklist" name="" value="checked">
+    <label for="checkbox">
+        <div class="verified">
+            <h6>Estacionamento</h6>
+    </label>
+    </div>
+
+    <input type="checkbox" id="checklist" name="" value="checked">
+    <label for="checkbox">
+        <div class="verified">
+            <h6>Acessibilidade à PCDs</h6>
+    </label>
+    </div>
 
 
-                        <div class="campos"><label for="informacoes">Observações</label><textarea name="" id="informações"
-                    placeholder="Informações extras"></textarea></div>
+    <div class="botoes"><input type="submit" value="Salvar"></div>
+    </form>
+    </div>
 
-                    <div class="campos">
-                        <input type= "checkbox" id= "checklist" name= "" value = "confirmo">
-                        <label for= "checklist"> Eu confirmo todos os itens aqui citados </label>
-                      </div>
-
-
-            <div class="botoes"><input type="submit" value="Salvar"></div>
-        </form>
     </div>
 </body>
+
 </html>

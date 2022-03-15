@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Clicker+Script&family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Poppins:wght@300;400&display=swap');
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: none;
+    scrollbar-color: #226042 #a6a6a6;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #a6a6a6;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #226042;
+    border-radius: 20px;
+    border: 0px none #ffffff;
+}
+
+/** Fundo do layout  **/
+html {
+    background-image: url(./images/riodejaneiro4.jpg);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/** Container principal de vidro  **/
+.container {
+    width: 1000px;
+    height: 100% auto;
+    margin: 90px auto;
+    padding: 40px;
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    backdrop-filter: blur(8px) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.box_subtitle {
+    width: 650px;
+    display: flex;
+    margin: 10px;
+    flex-direction: row;
+    margin-left: 40px;
+    margin-top: 0px;
+    margin-bottom: -40px;
+}
+
+.box_subtitle2 {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: 1px;
+    margin-left: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/** Fonte do título "Projeto Traveller" **/
+h2 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 60px;
+    line-height: 70px;
+    color: rgb(88, 88, 88);
+    margin-top: 40px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+/** Fonte dos subtítulos "Localização, contato" **/
+h3 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 34px;
+    color: #226042;
+    margin: 12px 12px;
+}
+
+/** Espaços entre os subtítulos **/
+
+.space {
+    margin: -15px;
+}
+
+/** Conteúdo da caixa principal branca onde vai ficar os campos dos formulários **/
+.campos {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/** Personalização das colunas e distâncias do formulário **/
+.campos, label {
+    margin: 8px 0;
+    font-weight: 900;
+    color: rgb(86, 86, 86);
+}
+
+/** Personalização das caixas do formulário **/
+input, textarea {
+    width: 98%;
+    height: 40px;
+    padding-left: 12px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    border: 1px #fff;
+    border-radius: 5px;
+}
+
+/** Espaço entre as caixas dos formulários e os subsubtitulos **/
+.em__linha {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+/** Tamanho das larguras das caixas do formulário **/
+.em__linha label, .em__linha input {
+    width: 30%;
+    margin: 0 5px;
+}
+
+/** Caixa de texto do final **/
+textarea {
+    width: 97%;
+    height: 100px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 12px;
+    resize: none;
+    outline: none;
+}
+
+/** Checklist final da página **/
+#checklist {
+    display: block;
+    right: 450px;
+    margin: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+
+h6 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    margin-left: 78px;
+    margin-bottom: 8px;
+    margin-top: -40px;
+}
+
+/** Localização do botão de salvar no final do formulário **/
+.botoes {
+    display: flex;
+    justify-content: end;
+    padding: 15px;
+}
+
+/** Personalização do botão no final do formulário de salvar **/
+.botoes input {
+    width: 80px;
+    height: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: #226042;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 6px 0px 0px 0px #000, 0px 6px 0px 0px #446a33, -6px 0px 0px 0px #184e23, 0px 0px 0px 6px #DA635D, 5px 5px 12px 5px rgba(0, 0, 0, 0);
+    box-shadow: 6px 0px 0px 0px #000, 0px 6px 0px 0px #1c5335, -6px 0px 0px 0px #000, 0px 0px 0px 6px #578e64, 5px 5px 12px 5px rgba(0, 0, 0, 0);
+}
+
+#name {
+    width: 98%;
+    height: 40px;
+    padding-left: 12px;
+    margin-top: -20px;
+}
+
+p {
+    margin-left: -60%;
+    text-align: left;
+}
+
+h4 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    color: rgb(137, 137, 137);
+    bottom: 70px;
+    margin: -10px;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+h5 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 17px;
+    margin-bottom: 2px;
+    margin-top: 18px;
+    text-indent: 0.1%;
+}
+
+.image {
+    margin-left: 72%;
+    z-index: 4;
+    display: flex;
+    margin-top: -310px;
+}
+
+/** header inicial e o banner **/
+.header {
+    backdrop-filter: blur(9px) saturate(0%);
+    -webkit-backdrop-filter: blur(9px) saturate(0%);
+    background-color: rgba(255, 255, 255, 0.428);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9vh;
+    z-index: 999;
+    box-shadow: 0px 0px 6px 0px rgba(101, 101, 101, 0.353);
+    display: block;
+}
+
+.box_logo {
+    display: block;
+    position: fixed;
+    z-index: 999;
+    margin-left: 5%;
+    float: center;
+}
